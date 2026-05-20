@@ -59,7 +59,7 @@ plt.tight_layout()
 plt.savefig("data/shap/global_summary.png", dpi=150, bbox_inches="tight")
 plt.close()
 
-print("  Saved → data/shap/global_summary.png")
+print("  Saved -> data/shap/global_summary.png")
 
 # ─────────────────────────────────────────────
 # STEP 3 — bar chart version (cleaner for dashboards)
@@ -74,7 +74,7 @@ plt.tight_layout()
 plt.savefig("data/shap/feature_bar.png", dpi=150, bbox_inches="tight")
 plt.close()
 
-print("  Saved → data/shap/feature_bar.png")
+print("  Saved -> data/shap/feature_bar.png")
 
 # ─────────────────────────────────────────────
 # STEP 4 — save SHAP values to CSV for the dashboard
@@ -83,5 +83,5 @@ print("  Saved → data/shap/feature_bar.png")
 shap_df = pd.DataFrame(shap_values, columns=[f"shap_{c}" for c in FEATURE_COLS])
 shap_df.to_csv("data/shap/shap_values.csv", index=False)
 
-print("  Saved → data/shap/shap_values.csv")
+print("  Saved -> data/shap/shap_values.csv")
 print("\nSHAP explainability complete.")

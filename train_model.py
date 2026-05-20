@@ -155,4 +155,4 @@ metrics = {
 with open("data/model_metrics.json", "w") as f:
     json.dump(metrics, f, indent=2)
 print("Metrics saved to data/model_metrics.json")
-print("\nDone! Run:  streamlit run dashboard.py")
+print("\nDone! Run: streamlit run dashboard.py")

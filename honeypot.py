@@ -234,6 +234,6 @@ def receive_log():
 
 if __name__ == "__main__":
     os.makedirs("data", exist_ok=True)
-    print("Victor Honeypot running  →  http://127.0.0.1:5000")
+    print("Victor Honeypot running  ->  http://127.0.0.1:5000")
     print("Endpoints: /  /articles  /about  /secret-data  /health")
     app.run(debug=True, port=5000)
