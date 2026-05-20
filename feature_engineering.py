@@ -88,7 +88,13 @@ def extract_features(df):
     # keep the label so we can evaluate later
     features["label"] = df["label"].values
 
-    print(f"Extracted {features.shape[1]-1} features from {len(features)} entries.")
+    # preserve raw metadata columns for realistic dashboard lookups
+    features["ip"] = df["ip"].values
+    features["timestamp"] = df["timestamp"].values
+    features["user_agent"] = df["user_agent"].values
+    features["path"] = df["path"].values
+
+    print(f"Extracted {features.shape[1]-5} features (plus 4 metadata columns) from {len(features)} entries.")
     return features
 
 
